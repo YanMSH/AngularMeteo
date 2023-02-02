@@ -1,0 +1,12 @@
+<section class="ml-5">
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="!loading" class="weather-info-container">
+    <ul class="mt-5" *ngIf="weather">
+      <li class="text-3xl font-bold mb-4 flex weather-title">{{weatherStatus | capitalize}} в г. {{currentCity}} <img src="{{weatherIcon}}"></li>
+      <li class="text-xl">Средняя температура воздуха: {{temperature.average}}°C</li>
+      <li class="text-xl">Минимальная температура воздуха: {{temperature.min}}°C</li>
+      <li class="text-xl">Максимальная температура воздуха: {{temperature.max}}°C</li>
+      <li class="text-xl">Cкорость ветра: {{temperature.windSpeed}} м/с</li>
+    </ul>
+  </div>
+</section>
